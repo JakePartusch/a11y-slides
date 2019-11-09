@@ -1,0 +1,19 @@
+{
+  "name": "barcamp-slides-2019",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "mdx-deck deck.mdx"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "mdx-deck": "^3.0.13"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.6.0",
+    "@reach/skip-nav": "^0.5.3",
+    "styled-components": "^4.4.1"
+  }
+}

@@ -1,0 +1,165 @@
+# a11y 101
+
+---
+
+# 👋 I'm Jake
+
+---
+
+import { Split } from "mdx-deck";
+
+import IntroList from "./components/IntroList.jsx";
+
+<Split>
+
+<img
+  src={
+    "https://lh3.googleusercontent.com/mIua-ua4JEhRGn5fwUeHqPRKge8WJxqVL-I4Qr75jKugTdhQqElwAygK-Mz5Ztj-7FKU6AymRGaFwQ5nS2oy85fkrZ1cW9tHe2rNWkW1YNniJ00kB1C7GrpW8D70REX7B4X0F94kvM9qdE0PZ9H7l95QDRbCxfGdfrHBF5MAqAL3elfnznLaOn6iq-5z_cib9n7L2o1ies1shDbf1-ZY861Qg-7ixIOiTtlmTeipZKjPaRsU4WT4axalCYgvpoxzADWlFhOk20AJmvuA35Cx8BQ8KWw-TbMqgQOciFuXixJSafo_n4Gl00AXyyxCVb4EgTCBE8MK2WnFberDD_W1wL6EhyjRMbcYPpY33RbVVK_QUDz0tob60d4IktxAAd1kxq348UsvVf4H0UexnNpG047MWE1TUP7DA1W8KsuDRojIo9KefaXlfpUL2481zIEgEhy9vQ0TVIqueNv-sCZGyXKYba3zsvlbRGATuvoWKnmGeVOSUUmOvcWeERaO0qBsXZFzodQ2EDMzYYVMLqTGc0i1hNR3WQ3k84Zh0-UQ8j2ju8q3XFP0ARC4wCwtKLd-f0BUO6tq8diH4yNZfSz8PNQKsoeviSQ4z8whoiHKoD5H1nSZcU5KLjbsJ1ZeCM182HnLWNz6XmVQrrA_1i3-B5hG4zQXtJhPTlmCwErL26p5D_6Dv5P5WAP6=w1318-h1756-no"
+  }
+/>
+
+# Jake Partusch
+
+<IntroList />
+
+</Split>
+
+---
+
+import OPiLogo from "./components/OPi.jsx";
+
+<OPiLogo />
+
+---
+
+# My a11y journey
+
+---
+
+# Things I knew
+
+- that screen readers were a thing
+- that websites should work without a mouse
+- that semantic HTML was good
+
+---
+
+# Tools of the trade
+
+- aXe
+- keyboard
+- screen reader
+
+---
+
+import SkipNavExample from "./components/SkipNavExample";
+
+<SkipNavExample />
+
+# SkipNav
+
+- [ReachUI SkipNav](https://ui.reach.tech/skip-nav/)
+- [WCAG - 2.4.1](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#qr-navigation-mechanisms-skip)
+
+---
+
+# Page Titles
+
+- Should be unique
+- [react-helmet](https://github.com/nfl/react-helmet)
+- [WCAG - 2.4.2](https://www.w3.org/WAI/WCAG21/quickref/#page-titled)
+
+---
+
+# Headings
+
+[WCAG - 2.4.10](https://www.w3.org/WAI/WCAG21/quickref/?showtechniques=246%2C2410#section-headings)
+
+---
+
+# h1- Headings are important...
+
+## h2 - for both a11y and SEO
+
+### h3 - But don't go overboard
+
+#### h4 - You probably don't need this
+
+##### h5 - or this
+
+---
+
+import TabIndexExample from "./components/TabIndexExample";
+
+# tabindex
+
+<TabIndexExample />
+
+[WCAG - 2.1.1](https://www.w3.org/WAI/WCAG21/quickref/#keyboard)
+
+---
+
+import TermsOfService from "./components/TermsOfService";
+
+# tabindex
+
+License
+
+<TermsOfService />
+
+---
+
+import FormDialog from "./components/FormDialog";
+
+# Focus Trapping
+
+<FormDialog />
+
+[focus-trap-react](https://github.com/davidtheclark/focus-trap-react)
+
+---
+
+import SnackbarExample from "./components/SnackbarExample";
+
+# aria-live
+
+<SnackbarExample />
+
+[WCAG - 4.2.1](https://www.w3.org/WAI/WCAG21/quickref/#status-messages)
+
+---
+
+# Toggle animations
+
+```css
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+```
+
+[WCAG - 2.3.3](https://www.w3.org/WAI/WCAG21/quickref/#animation-from-interactions)
+
+---
+
+# Other things
+
+- Labels, labels, labels
+- Ensure error messages are announced
+- Color contrast
+- https://www.w3.org/WAI/WCAG21/quickref/
+
+---
+
+# Checklist
+
+- Use aXe (preferably automated)
+- Use a keyboard
+- Use a screen reader
+- ☝️during development
+
+---
+
+# The end
